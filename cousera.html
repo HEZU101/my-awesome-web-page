@@ -1,36 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Awesome Web Page</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Page Title</title>
+  <style>
+    /* Skip to Main Content link */
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: #000;
+      color: #fff;
+      padding: 8px;
+      z-index: 100;
+    }
+    .skip-link:focus {
+      top: 0;
+    }
+
+    /* Navigation */
+    nav {
+      display: inline-block;
+      width: 80%;
+    }
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+    nav li {
+      display: inline;
+      margin-right: 15px;
+    }
+    nav img {
+      width: 10%;
+    }
+
+    /* Main Content */
+    main {
+      padding: 20px;
+    }
+
+    /* Grid Layout */
+    .grid {
+      display: grid;
+      grid-template-columns: 40% 40%;
+      justify-content: space-between;
+      align-items: center;
+      row-gap: 20px;
+    }
+    .grid img {
+      width: 100%;
+    }
+
+    /* Flex Layout */
+    .flex {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+    .flex img {
+      max-width: 100%;
+      margin: 10px;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Welcome to My Awesome Web Page</h1>
-    </header>
-    <main>
-        <section>
-            <h2>Things I Love</h2>
-            <ul>
-                <li>Coding</li>
-                <li>Traveling</li>
-                <li>Photography</li>
-            </ul>
-        </section>
-        <section>
-            <h2>Gallery</h2>
-            <img src="https://via.placeholder.com/150" alt="Placeholder Image 1">
-            <img src="https://via.placeholder.com/150" alt="Placeholder Image 2">
-            <img src="https://via.placeholder.com/150" alt="Placeholder Image 3">
-        </section>
-        <section>
-            <h2>Learn More</h2>
-            <p>For more information, visit <a href="https://www.example.com" target="_blank">this website</a>.</p>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2025 My Awesome Web Page</p>
-    </footer>
+  <!-- Skip to Main Content link -->
+  <a href="#main-content" class="skip-link">Skip to Main Content</a>
+
+  <!-- Navigation -->
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Parks</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+    <img src="logo.png" alt="Logo">
+  </nav>
+
+  <!-- Main Content -->
+  <main id="main-content">
+    <h1>Welcome to the Page</h1>
+    <div class="grid">
+      <img src="image1.jpg" alt="Image 1">
+      <img src="image2.jpg" alt="Image 2">
+      <img src="image3.jpg" alt="Image 3">
+      <img src="image4.jpg" alt="Image 4">
+    </div>
+    <div class="flex">
+      <img src="image5.jpg" alt="Image 5">
+      <img src="image6.jpg" alt="Image 6">
+      <img src="image7.jpg" alt="Image 7">
+    </div>
+  </main>
 </body>
 </html>
